@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Icchu ♡</title>
+<title>Happy Birthday Icchu ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -16,13 +17,135 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#faf7f2;
-color:#4a4a4a;
+background:#0f0f14;
+color:white;
 font-family:'Poppins',sans-serif;
 overflow-x:hidden;
 }
 
 .hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('hero.jpeg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+animation:fadeUp 2s ease;
+}
+
+.small{
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:14px;
+color:#d9c4b7;
+}
+
+h1{
+font-size:4rem;
+font-family:'Cormorant Garamond',serif;
+margin:20px 0;
+}
+
+.sub{
+font-size:1.1rem;
+opacity:.9;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+border-radius:30px;
+background:white;
+color:black;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+.section{
+padding:100px 10%;
+text-align:center;
+}
+
+.title{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+margin-bottom:50px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:35px;
+}
+
+.card{
+background:#171721;
+padding:15px;
+border-radius:20px;
+transform:rotate(-2deg);
+transition:.4s;
+}
+
+.card:nth-child(2){
+transform:rotate(2deg);
+}
+
+.card:nth-child(3){
+transform:rotate(-3deg);
+}
+
+.card:hover{
+transform:scale(1.03);
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+display:block;
+}
+
+.caption{
+margin-top:15px;
+color:#ddd;
+}
+
+.envelope{
+max-width:700px;
+margin:auto;
+background:#171721;
+padding:40px;
+border-radius:25px;
+cursor:pointer;
+transition:.4s;
+}
+
+.envelope:hover{
+transform:translateY(-5px);
+}
+
+.letter{
+display:none;
+margin-top:30px;
+line-height:2;
+font-size:1.05rem;
+}
+
+.final{
 height:100vh;
 display:flex;
 justify-content:center;
@@ -32,267 +155,180 @@ text-align:center;
 padding:20px;
 }
 
-.small{
-letter-spacing:4px;
-font-size:14px;
-text-transform:uppercase;
-color:#b78f8f;
-margin-bottom:15px;
-}
-
-h1{
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-font-weight:600;
-}
-
-.subtitle{
-margin-top:15px;
-font-size:1.1rem;
-max-width:650px;
-line-height:1.8;
-opacity:.85;
-}
-
-.btn{
-margin-top:35px;
-padding:14px 28px;
-border:none;
-border-radius:30px;
-background:#e8d2d2;
-cursor:pointer;
-font-size:1rem;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-.section{
-padding:100px 10%;
-text-align:center;
-}
-
-.section h2{
-font-family:'Cormorant Garamond',serif;
+.final h2{
 font-size:3rem;
-margin-bottom:25px;
+font-family:'Cormorant Garamond',serif;
 }
 
-.card{
-background:white;
-max-width:850px;
-margin:auto;
-padding:40px;
-border-radius:25px;
-box-shadow:0 10px 30px rgba(0,0,0,.06);
-line-height:2;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+.final-text{
+display:none;
 margin-top:30px;
-}
-
-.photo{
-height:260px;
-border-radius:20px;
-background:#f0e3e3;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:18px;
-color:#8a7a7a;
-}
-
-.quote{
-font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-font-style:italic;
+font-size:1.4rem;
+line-height:2;
 max-width:700px;
-margin:auto;
 }
 
-footer{
-padding:100px 20px;
-text-align:center;
-}
-
-.final{
-font-family:'Cormorant Garamond',serif;
-font-size:3rem;
-}
-
-.typewriter{
-overflow:hidden;
-border-right:2px solid #4a4a4a;
-white-space:nowrap;
-animation:
-typing 4s steps(40,end),
-blink .7s infinite;
-}
-
-@keyframes typing{
-from{width:0}
-to{width:100%}
-}
-
-@keyframes blink{
-50%{border-color:transparent}
-}
-
-.fade{
-opacity:0;
-transform:translateY(30px);
-transition:1.2s;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.heart{
+.star{
 position:fixed;
-bottom:-20px;
-font-size:18px;
-animation:float 8s linear infinite;
-opacity:.35;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+opacity:.7;
+animation:twinkle 3s infinite;
 pointer-events:none;
 }
 
-@keyframes float{
+@keyframes twinkle{
+50%{opacity:.2;}
+}
+
+@keyframes fadeUp{
 from{
-transform:translateY(0);
+opacity:0;
+transform:translateY(40px);
 }
 to{
-transform:translateY(-110vh);
+opacity:1;
+transform:translateY(0);
 }
 }
+
 </style>
 </head>
+
 <body>
 
-<section class="hero">
+<div class="hero">
+<div class="hero-content">
 <div class="small">for my icchu ♡</div>
 
-<h1 class="typewriter">
-Happy Birthday, Jiya.
-</h1>
+<h1>Happy 20th Birthday, Jiya</h1>
 
-<p class="subtitle">
-The world got a little prettier the day you were born.
-</p>
-
-<button class="btn" onclick="document.getElementById('letter').scrollIntoView()">
-Open My Letter ✨
-</button>
-</section>
-
-<section class="section fade">
-<h2>A Few Things About You</h2>
-
-<div class="card">
-☕ Loves tea<br>
-🎵 Loves music<br>
-💭 Overthinks sometimes<br>
-🌷 Has the kindest heart<br>
-🏠 Feels like home
+<div class="sub">
+16 years of friendship.<br>
+2 years of love.<br>
+Countless memories.
 </div>
-</section>
 
-<section class="section fade">
-<h2>Our Memories</h2>
+<a href="#memories" class="btn">our memories ❤️</a>
+</div>
+</div>
+
+<section class="section" id="memories">
+
+<div class="title">A Few Of My Favorite Pictures</div>
 
 <div class="gallery">
-<div class="photo">Add Photo 1</div>
-<div class="photo">Add Photo 2</div>
-<div class="photo">Add Photo 3</div>
-</div>
-</section>
-
-<section id="letter" class="section fade">
-<h2>To Icchu 💌</h2>
 
 <div class="card">
-Dear Icchu,<br><br>
+<img src="smile.jpeg">
+<div class="caption">still one of my favorite smiles ✨</div>
+</div>
 
-If I had to describe you in a few things,
-I'd choose warm tea on a rainy day,
-Taylor Swift songs at midnight,
-messy thoughts that somehow make sense,
-and the feeling of home.<br><br>
+<div class="card">
+<img src="pretty.jpeg">
+<div class="caption">effortlessly beautiful ❤️</div>
+</div>
 
-Thank you for every smile,
-every conversation,
-and every memory we've made together.<br><br>
+<div class="card">
+<img src="cake.jpeg">
+<div class="caption">officially 20 🎂</div>
+</div>
 
-You make ordinary days feel special,
-and even when life gets difficult,
-you somehow make everything feel lighter.<br><br>
+</div>
 
-I hope this year brings you happiness,
-success,
-beautiful memories,
-and all the little moments that make you smile.<br><br>
+</section>
 
-Happy Birthday, my Icchu. ❤️<br><br>
+<section class="section">
+
+<div class="title">A Letter For Icchu 💌</div>
+
+<div class="envelope" onclick="openLetter()">
+
+<h3>Open Letter ❤️</h3>
+
+<div class="letter" id="letter">
+
+Happy 20th Birthday, Icchu ❤️
+<br><br>
+
+16 years of friendship.
+<br>
+2 years of love.
+<br>
+Countless memories.
+<br><br>
+
+Thank you for growing up with me and for being my favorite person through it all.
+<br><br>
+
+Here's to more laughs, more memories, and more years of annoying each other.
+<br><br>
+
+Now go enjoy your 20th birthday, old lady. 😌❤️
+<br><br>
+
+I love you.
+<br><br>
 
 — Hxrath
+
 </div>
+
+</div>
+
 </section>
 
-<section class="section fade">
-<div class="quote">
-"In a world full of temporary things,
-you feel like home."
+<section class="final">
+
+<button class="btn" onclick="showFinal()">
+one last thing...
+</button>
+
+<div class="final-text" id="finalText">
+
+<h2>❤️</h2>
+
+<br>
+
+In every version of my life,
+
+<br><br>
+
+I'd still choose you.
+
+<br><br>
+
+Happy Birthday, Icchu.
+
 </div>
+
 </section>
-
-<footer>
-<div class="final">
-Happy Birthday, Jiya ♡
-</div>
-
-<p style="margin-top:20px;">
-Thank you for existing.
-</p>
-</footer>
 
 <script>
 
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
-});
-
-document.querySelectorAll('.fade').forEach(el=>{
-observer.observe(el);
-});
-
-function createHeart(){
-const heart=document.createElement('div');
-heart.classList.add('heart');
-heart.innerHTML='♡';
-
-heart.style.left=Math.random()*100+'vw';
-heart.style.fontSize=(10+Math.random()*20)+'px';
-heart.style.animationDuration=(6+Math.random()*6)+'s';
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
-},12000);
+function openLetter(){
+document.getElementById('letter').style.display='block';
 }
 
-setInterval(createHeart,700);
+function showFinal(){
+document.getElementById('finalText').style.display='block';
+}
+
+for(let i=0;i<120;i++){
+
+let star=document.createElement('div');
+
+star.classList.add('star');
+
+star.style.left=Math.random()*100+'vw';
+star.style.top=Math.random()*100+'vh';
+
+star.style.animationDelay=Math.random()*5+'s';
+
+document.body.appendChild(star);
+}
 
 </script>
 
